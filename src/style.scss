@@ -338,11 +338,20 @@ body {
     margin-top: 1rem;
   }
 
-  .link-container,
+  .link-container {
+    width: 100%;
+    text-align: center;
+  }
+
   .img-container {
     width: 100%;
     text-align: center;
     align-items: center;
+
+    img {
+      width: 100%;
+      max-width: 400px;
+    }
   }
 
   .link-container {
@@ -354,28 +363,25 @@ body {
       .underline {
         position: relative;
         display: inline-block;
-        /* Add some padding-bottom if needed to avoid overlap */
-        padding-bottom: 20px;
+        padding-bottom: 0.5rem;
       }
 
       .underline::after {
         content: "";
         position: absolute;
-        bottom: 10px; /* adjust this to place the border above the options */
+        bottom: 0.3rem;
         left: 50%;
         transform: translateX(-50%);
         width: 80%;
         border-bottom: 1px solid white;
       }
 
-      /* Pseudo-element for options below the border */
       .underline::before {
         content: attr(data-options);
         position: absolute;
-        top: 100%; /* directly below the span */
+        top: 100%;
         left: 50%;
         transform: translateX(-50%);
-        margin-top: 4px; /* spacing between border and options text */
         font-size: 0.9em;
         color: white;
         white-space: nowrap;

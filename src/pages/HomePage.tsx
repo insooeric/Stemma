@@ -14,27 +14,25 @@ const HomePage: React.FC = () => {
       <br />
       <div className="link-container">
         <p>
-          <span className="underline" data-options="option1 option2">
+          <span className="underline" data-options="base url">
             https://stemma.onrender.com/api/badge?
           </span>
         </p>
         <br />
         <p>
-          <span className="underline" data-options="option1 option2">
+          <span className="underline" data-options="user">
             user=insooeric
           </span>
-          <span className="underline" data-options="option1 option2">
+          <span className="underline" data-options="badges">
             &badge=welcome,to,s,temma
-          </span>
-          <span className="underline" data-options="option1 option2">
-            &row=2
           </span>
         </p>
       </div>
 
       <br />
+      <br />
       <div className="img-container">
-        <img src="https://stemma.onrender.com/api/badge?user=insooeric&badge=welcome,to,s,temma&row=2" />
+        <img src="https://stemma.onrender.com/api/badge?user=insooeric&badge=welcome,to,s,temma" />
       </div>
     </div>
   );
