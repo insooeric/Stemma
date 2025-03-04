@@ -15,7 +15,7 @@ const FooterBar: React.FC = () => {
           <div className="email-field">insooeric.son@gmail.com</div>
           <div className="links-field">
             <a
-              href="https://github.com/insooeric/GithubBadge#readme"
+              href="https://github.com/insooeric/Stemma#readme"
               target="_blank"
               rel="noreferrer"
             >
