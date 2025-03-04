@@ -5,12 +5,13 @@
   </div>
 </div>
 
-
 <h3 align="center">Show your skills with badges or custom your own one!</h3>
 <hr>
 
 ## DEPLOYMENT LINK! => [Stemma](https://stemma.vercel.app/)
+
 #### Backend code? => [Stemma Backend](https://github.com/insooeric/GithubBadges-Backend)
+
 # Docs
 
 - [Example](#example)
@@ -30,24 +31,24 @@ Copy and paste the code block below into your readme to add the skills badge ele
 Change the `?badge=acrobat` to a name of badge you want to use. You can find a full list of badges [here](#badges-list).
 
 ```md
-![My Badge](https://githubbadges.onrender.com/api/badge?badge=acrobat)
+![My Badge](https://stemma.onrender.com/api/badge?badge=acrobat)
 ```
 
-![My Badge](https://githubbadges.onrender.com/api/badge?badge=acrobat)
+![My Badge](https://stemma.onrender.com/api/badge?badge=acrobat)
 
 # Use personal Badges
 
 You can configure personal badges then use it. Note that others can use your badge; However, they can't modify the badge.
 
-[Badge Hub Website](https://badgehub.vercel.app/) allows you to create/modify/delete your personal badges.
+[Badge Hub Website](https://stemma.vercel.app/) allows you to create/modify/delete your personal badges.
 
 The value of `user` and `badge` are string; `user` is github user name and `badge` is a name of badge you assigned.
 
 ```md
-![My Badge](https://githubbadges.onrender.com/api/badge?user=insooeric&badge=I_LOVE_CHICKEN_WING)
+![My Badge](https://stemma.onrender.com/api/badge?user=insooeric&badge=I_LOVE_CHICKEN_WING)
 ```
 
-![My Badge](https://githubbadges.onrender.com/api/badge?user=insooeric&badge=I_LOVE_CHICKEN_WING)
+![My Badge](https://stemma.onrender.com/api/badge?user=insooeric&badge=I_LOVE_CHICKEN_WING)
 
 # Centering Badges
 
@@ -56,14 +57,14 @@ Want to center the badges in your readme? The SVGs are automatically resized, so
 ```html
 <p align="center">
   <img
-    src="https://githubbadges.onrender.com/api/badge?user=insooeric&badge=I_LOVE_CHICKEN_WING"
+    src="https://stemma.onrender.com/api/badge?user=insooeric&badge=I_LOVE_CHICKEN_WING"
   />
 </p>
 ```
 
 <p align="center">
   <img
-    src="https://githubbadges.onrender.com/api/badge?user=insooeric&badge=I_LOVE_CHICKEN_WING"
+    src="https://stemma.onrender.com/api/badge?user=insooeric&badge=I_LOVE_CHICKEN_WING"
   />
 </p>
 
