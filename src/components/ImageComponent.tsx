@@ -1,6 +1,6 @@
 import add_icon from "@/img/add_icon.svg";
 
-const ImageComponent = () => {
+const ImageComponent: React.FC = () => {
   return (
     <div className="image-component">
       <div className="title">Image List</div>

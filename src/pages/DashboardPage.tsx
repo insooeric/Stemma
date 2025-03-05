@@ -11,6 +11,7 @@ import BadgeComponent from "@/components/BadgeComponent";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import ImageComponent from "@/components/ImageComponent";
+import WidgetComponent from "@/components/WidgetComponent";
 
 const DashboardPage: React.FC = () => {
   const user = useSelector((state: RootState) => state.auth.user);
@@ -30,6 +31,8 @@ const DashboardPage: React.FC = () => {
       {user ? (
         <>
           <BadgeComponent />
+          <br />
+          <WidgetComponent />
           <br />
           <ImageComponent />
         </>
