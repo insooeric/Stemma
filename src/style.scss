@@ -692,6 +692,7 @@ body {
       display: flex;
       flex-direction: row;
       align-items: stretch;
+
       gap: 0.5rem;
       border-radius: 1rem;
       border: 1px gray solid;
@@ -732,6 +733,12 @@ body {
             }
           }
 
+          p.statistic-label {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 0.5rem;
+          }
+
           .all-languages-container {
             display: flex;
             flex-direction: row;
@@ -747,8 +754,46 @@ body {
           }
         }
 
-        img {
+        .img-container {
+          position: relative;
           width: 100%;
+          img {
+            width: 100%;
+          }
+
+          .copy-icon {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            right: 0.4rem;
+            top: 0.4rem;
+
+            width: 30px;
+            height: 30px;
+
+            padding: 0.2rem;
+
+            border: 1px white solid;
+            border-radius: 0.5rem;
+            box-sizing: border-box;
+
+            cursor: pointer;
+
+            &:hover {
+              background-color: $hover-color;
+            }
+
+            &:active {
+              background-color: $active-color;
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
         }
       }
     }

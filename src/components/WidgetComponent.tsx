@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
+import copy_icon from "@/img/copy_icon.svg";
 
 const WidgetComponent: React.FC = () => {
   const user = useSelector((state: RootState) => state.auth.user);
@@ -13,9 +14,7 @@ const WidgetComponent: React.FC = () => {
     [key: string]: boolean;
   }>({});
 
-  const [statisticLabel, setStatisticLabel] = useState(
-    "Please select up to 4 items."
-  );
+  const [statisticLabel, setStatisticLabel] = useState("Select up to 4 items.");
 
   const [is4Selected, setIs4Selected] = useState(false);
 
@@ -33,9 +32,11 @@ const WidgetComponent: React.FC = () => {
     setProfileUrl(
       `https://stemma.onrender.com/api/UserInfo/profile?GitHubUserName=${
         user.username
-      }&FullName=${
-        isNullOrEmpty(userFullName) ? "Your name goes here" : userFullName
-      }`
+      }${!isNullOrEmpty(userFullName) ? `&FullName=${userFullName}` : ``}`
+
+      // &FullName=${
+      //   isNullOrEmpty(userFullName) ? "" : userFullName
+      // }`
     );
   }, [user, userFullName]);
 
@@ -59,9 +60,9 @@ const WidgetComponent: React.FC = () => {
       return;
     }
 
-    if (selectedLanguage.length >= 4) {
-      setIs4Selected(true);
-    }
+    // if (selectedLanguage.length >= 4) {
+    //   setIs4Selected(true);
+    // }
 
     // console.log(`---------SELECTED LANGUAGES---------`);
     // selectedLanguage.forEach((lang) => {
@@ -141,10 +142,40 @@ const WidgetComponent: React.FC = () => {
   // }, [languages]);
 
   useEffect(() => {
-    if (is4Selected) {
-      console.log("maximum selected");
+    // console.log(languages);
+    let selectedNum = 0;
+    const languageKeys = Object.keys(languages);
+    if (languageKeys.length > 0) {
+      languageKeys.forEach((langKey) => {
+        if (languages[langKey]) {
+          selectedNum++;
+        }
+      });
     }
-  }, [is4Selected]);
+    if (selectedNum >= 4) {
+      setIs4Selected(true);
+      setStatisticLabel("Maximum items selected");
+    } else {
+      setIs4Selected(false);
+      setStatisticLabel("Select up to 4 items.");
+    }
+
+    // if (is4Selected) {
+    //   console.log("maximum selected");
+    // }
+  }, [is4Selected, languages]);
+
+  const handleCopyClick = (widgetUrl: string) => {
+    //const imgTagString = `<img alt="${badgeName}" src="${badgeURL}">`;
+    navigator.clipboard
+      .writeText(widgetUrl)
+      .then(() => {
+        console.log("Text copied to clipboard:", widgetUrl);
+      })
+      .catch((err) => {
+        console.error("Failed to copy:", err);
+      });
+  };
 
   return (
     <div className="widget-component">
@@ -159,11 +190,20 @@ const WidgetComponent: React.FC = () => {
               onChange={(e) => setUserFullName(e.target.value)}
             />
           </div>
-          <img src={profileUrl} />
+          <div className="img-container">
+            <img src={profileUrl} />
+            <div
+              className="copy-icon"
+              onClick={() => handleCopyClick(profileUrl)}
+            >
+              <img src={copy_icon} />
+            </div>
+          </div>
         </div>
         <div className="item">
           <div className="option-container">
-            {statisticLabel}
+            <p className="statistic-label">{statisticLabel}</p>
+
             <div className="all-languages-container">
               {Object.keys(languages).length > 0 ? (
                 Object.keys(languages).map((langKey) => (
@@ -171,12 +211,29 @@ const WidgetComponent: React.FC = () => {
                     key={langKey}
                     className="language-item"
                     onClick={() => {
-                      if (!is4Selected) {
+                      // console.log(is4Selected);
+                      if (!languages[langKey]) {
+                        // if selected language is false, we're gonna select it upon condition
+                        if (!is4Selected) {
+                          setLanguages((prev) => ({
+                            ...prev,
+                            [langKey]: true,
+                          }));
+                        }
+                      } else {
+                        // if selected language is true, deselect it
                         setLanguages((prev) => ({
                           ...prev,
-                          [langKey]: !prev[langKey],
+                          [langKey]: false,
                         }));
                       }
+
+                      // if (!is4Selected) {
+                      //   setLanguages((prev) => ({
+                      //     ...prev,
+                      //     [langKey]: !prev[langKey],
+                      //   }));
+                      // }
                     }}
                     style={{
                       backgroundColor: languages[langKey]
@@ -193,7 +250,16 @@ const WidgetComponent: React.FC = () => {
               )}
             </div>
           </div>
-          <img src={statisticUrl} />
+
+          <div className="img-container">
+            <img src={statisticUrl} />
+            <div
+              className="copy-icon"
+              onClick={() => handleCopyClick(statisticUrl)}
+            >
+              <img src={copy_icon} />
+            </div>
+          </div>
         </div>
       </div>
     </div>
