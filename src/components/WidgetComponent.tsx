@@ -99,6 +99,7 @@ const WidgetComponent: React.FC = () => {
 
     const profileUrl = `https://stemma.onrender.com/api/UserInfo/profile?GitHubUserName=${user.username}`;
     const statisticUrl = `https://stemma.onrender.com/api/UserInfo/statistic?GitHubUserName=${user.username}`;
+    //const statisticUrl = `https://localhost:32769/api/UserInfo/statistic?GitHubUserName=${user.username}`;
     setProfileUrl(profileUrl);
     setStatisticUrl(statisticUrl);
 
@@ -113,6 +114,7 @@ const WidgetComponent: React.FC = () => {
         }
         const langResponse = await fetch(
           `https://stemma.onrender.com/api/UserInfo/sortedlanguages?GitHubUserName=${user.username}`,
+          // `https://localhost:32769/api/UserInfo/sortedlanguages?GitHubUserName=${user.username}`,
           {
             method: "GET",
             headers: { "Content-Type": "application/json" },
