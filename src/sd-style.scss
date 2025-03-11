@@ -11,20 +11,13 @@
       grid-gap: 0;
 
       .option-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        display: flex;
         grid-gap: 5px;
 
         width: 100%;
         overflow-x: auto;
         scrollbar-width: thin;
         scrollbar-color: gray transparent;
-
-        .option {
-          white-space: nowrap;
-          border: 1px gray solid;
-          border-radius: 0.5rem;
-        }
       }
     }
   }
