@@ -10,7 +10,7 @@
 
 ## DEPLOYMENT LINK! => [Stemma](https://stemma.vercel.app/)
 
-#### Backend code? => [Stemma Backend](https://github.com/insooeric/GithubBadges-Backend)
+#### Backend code? => [Stemma Backend](https://github.com/insooeric/Stemma-Backend)
 
 # Docs
 
