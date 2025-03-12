@@ -5,11 +5,10 @@
   </div>
 </div>
 
-This is home to [Stemma](https://stemma.vercel.app/).
+This is home to [Stemma](https://stemma.vercel.app/), a webservice for displaying badges and other images in SVG, built for GitHub readmes and other web page. The application involves loging in with GitHub account using OAuth2, managing customized badges, and others.
 
-# Docs
+# Contents
 
-- [Example](#example)
 - [Usage](#usage)
 
   - [Default Badges](#default-badges)
@@ -20,11 +19,8 @@ This is home to [Stemma](https://stemma.vercel.app/).
 - [Tips](#tips)
   - [Centering Badges](#centering-badges)
 - [Backend Code](#backend-codes)
+- [Example](#example)
 - [Badges List](#badges-list)
-
-# Example
-
-<p align="center"><img src="./assets/badge_example_pic.png"/></p>
 
 # Usage
 
@@ -113,6 +109,10 @@ Want to center the badges in your readme? The SVGs are automatically resized, so
 # Backend codes
 
 For backend codes, visit [Stemma Backend](https://github.com/insooeric/Stemma-Backend)
+
+# Example
+
+<p align="center"><img src="./assets/badge_example_pic.png"/></p>
 
 # Badges List
 
