@@ -195,8 +195,8 @@ const BadgeComponent: React.FC = () => {
       });
       if (!response.ok) {
         const errorData = await response.json();
-        console.log(errorData);
-        //setNameError(errorData?.message);
+        //console.log(errorData);
+        setNameError(errorData?.message);
         throw new Error(errorData?.message || "Error uploading badge.");
       }
       await fetchBadges();
