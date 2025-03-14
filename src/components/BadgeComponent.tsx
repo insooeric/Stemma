@@ -293,101 +293,105 @@ const BadgeComponent: React.FC = () => {
             <img src={add_icon} />
           </div>
         </div>
-        {isFetchingBadges ? (
-          <div className="loading-container">
-            <img
-              src={loading_icon}
-              className="loading-animation"
-              alt="Loading badges..."
-            />
-            <p>Loading badges...</p>
-          </div>
-        ) : (
-          badges.map((badge) => (
-            <div className="badge-item" key={badge.badgeName}>
-              {editingBadgeName === badge.badgeName ? (
-                <div className="rename-area">
-                  <input
-                    type="text"
-                    value={tempNewName}
-                    onChange={(e) => setTempNewName(e.target.value)}
-                    autoFocus
-                  />
-                  <div className="button-panel">
-                    <button
-                      onClick={() => {
-                        handleConfirmRename(badge.badgeName);
-                      }}
-                    >
-                      Save
-                    </button>
-                    <button onClick={handleCancelEditing}>Cancel</button>
+        <div className="scroll-area">
+          {isFetchingBadges ? (
+            <div className="loading-container">
+              <img
+                src={loading_icon}
+                className="loading-animation"
+                alt="Loading badges..."
+              />
+              <p>Loading badges...</p>
+            </div>
+          ) : (
+            badges.map((badge) => (
+              <div className="badge-item" key={badge.badgeName}>
+                {editingBadgeName === badge.badgeName ? (
+                  <div className="rename-area">
+                    <input
+                      type="text"
+                      value={tempNewName}
+                      onChange={(e) => setTempNewName(e.target.value)}
+                      autoFocus
+                    />
+                    <div className="button-panel">
+                      <button
+                        onClick={() => {
+                          handleConfirmRename(badge.badgeName);
+                        }}
+                      >
+                        Save
+                      </button>
+                      <button onClick={handleCancelEditing}>Cancel</button>
 
-                    {nameError && <p className="error-message">{nameError}</p>}
+                      {nameError && (
+                        <p className="error-message">{nameError}</p>
+                      )}
+                    </div>
                   </div>
-                </div>
-              ) : (
-                <div className="badge-name">
-                  <strong>{badge.badgeName}</strong>
-                </div>
-              )}
-
-              <div className="badge-update">
-                {editingBadgeName !== badge.badgeName && (
-                  <div
-                    className="button"
-                    onClick={() => handleStartEditing(badge.badgeName)}
-                  >
-                    <img src={edit_icon} alt="Update Badge Name" />
+                ) : (
+                  <div className="badge-name">
+                    <strong>{badge.badgeName}</strong>
                   </div>
                 )}
-              </div>
-              <div className="badge-copy-url">
-                <div
-                  className="button"
-                  onClick={() => handleCopyClick(badge.badgeURL)}
-                >
-                  <img src={copy_icon} alt="Copy Badge URL" />
-                </div>
-              </div>
-              <div className="badge-preview">
-                <div className="image-container">
-                  {loadingImages[badge.badgeName] && (
-                    <img
-                      src={loading_icon}
-                      alt="Loading..."
-                      className="loading-animation"
-                    />
-                  )}
-                  <div className="image-inner-container">
-                    <img
-                      src={badge.badgeURL}
-                      alt="Badge"
-                      onLoad={() => handleImageLoad(badge.badgeName)}
-                      onError={() => handleImageError(badge.badgeName)}
-                      style={
-                        loadingImages[badge.badgeName]
-                          ? { display: "none" }
-                          : {}
-                      }
-                    />
 
-                    <div className="background-panel" />
+                <div className="badge-update">
+                  {editingBadgeName !== badge.badgeName && (
+                    <div
+                      className="button"
+                      onClick={() => handleStartEditing(badge.badgeName)}
+                    >
+                      <img src={edit_icon} alt="Update Badge Name" />
+                    </div>
+                  )}
+                </div>
+                <div className="badge-copy-url">
+                  <div
+                    className="button"
+                    onClick={() => handleCopyClick(badge.badgeURL)}
+                  >
+                    <img src={copy_icon} alt="Copy Badge URL" />
+                  </div>
+                </div>
+                <div className="badge-preview">
+                  <div className="image-container">
+                    {loadingImages[badge.badgeName] && (
+                      <img
+                        src={loading_icon}
+                        alt="Loading..."
+                        className="loading-animation"
+                      />
+                    )}
+                    <div className="image-inner-container">
+                      <img
+                        src={badge.badgeURL}
+                        alt="Badge"
+                        onLoad={() => handleImageLoad(badge.badgeName)}
+                        onError={() => handleImageError(badge.badgeName)}
+                        style={
+                          loadingImages[badge.badgeName]
+                            ? { display: "none" }
+                            : {}
+                        }
+                      />
+
+                      <div className="background-panel" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="badge-delete">
+                  <div
+                    className="button"
+                    onClick={() => handleDeleteBadge(badge.badgeName)}
+                  >
+                    <img src={delete_icon} alt="Delete badge" />
                   </div>
                 </div>
               </div>
-
-              <div className="badge-delete">
-                <div
-                  className="button"
-                  onClick={() => handleDeleteBadge(badge.badgeName)}
-                >
-                  <img src={delete_icon} alt="Delete badge" />
-                </div>
-              </div>
-            </div>
-          ))
-        )}
+            ))
+          )}
+        </div>
       </div>
       {showAddModal && (
         <div className="badge-add-form" onClick={handleCloseAddModal}>

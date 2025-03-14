@@ -448,36 +448,10 @@ body {
       max-height: 400px;
       //aspect-ratio: 1 / 0.61803398;
 
-      overflow-y: auto;
-      scrollbar-width: thin;
-      scrollbar-color: gray transparent;
+      // overflow-y: auto;
+      // scrollbar-width: thin;
+      // scrollbar-color: gray transparent;
 
-      .loading-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 20px;
-        margin: 0 auto;
-
-        width: 50px;
-        height: 50px;
-      }
-
-      .loading-animation {
-        height: 100%;
-        aspect-ratio: 1/1;
-        animation: rotate 1s linear infinite;
-
-        @keyframes rotate {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-      }
       .button-pannel {
         margin-bottom: 0.5rem;
         .add-badge-btn {
@@ -499,42 +473,124 @@ body {
         }
       }
 
-      .badge-item {
-        display: grid;
-        grid-template-columns: 1fr 40px 40px 60px 40px;
-        //grid-template-rows: 40px;
-        gap: 5px;
+      .scroll-area {
         width: 100%;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: gray transparent;
+        .loading-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 20px;
+          margin: 0 auto;
 
-        padding: 0.5rem 0;
+          width: 50px;
+          height: 50px;
+        }
 
-        border-top: 2px white solid;
+        .loading-animation {
+          height: 100%;
+          aspect-ratio: 1/1;
+          animation: rotate 1s linear infinite;
 
-        .rename-area {
-          input {
-            border: none;
-            border-bottom: 1px solid gray;
-            outline: none;
-            background-color: transparent;
-            color: #fff;
-
-            &:focus {
-              border-bottom-color: #bbb;
+          @keyframes rotate {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
             }
           }
-          .button-panel {
-            //border: 1px white solid;
-            margin-top: 0.3rem;
-            button {
-              background-color: #242424;
+        }
+
+        .badge-item {
+          display: grid;
+          grid-template-columns: 1fr 40px 40px 60px 40px;
+          //grid-template-rows: 40px;
+          gap: 5px;
+          width: 100%;
+
+          padding: 0.5rem 0;
+
+          border-top: 2px white solid;
+
+          .rename-area {
+            input {
+              border: none;
+              border-bottom: 1px solid gray;
+              outline: none;
+              background-color: transparent;
               color: #fff;
-              border: 1px solid #fff;
-              padding: 0.3rem 0.6rem;
+
+              &:focus {
+                border-bottom-color: #bbb;
+              }
+            }
+            .button-panel {
+              //border: 1px white solid;
+              margin-top: 0.3rem;
+              button {
+                background-color: #242424;
+                color: #fff;
+                border: 1px solid #fff;
+                padding: 0.3rem 0.6rem;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                font-size: 0.8rem;
+                font-weight: bold;
+                margin-right: 0.5rem;
+
+                &:hover {
+                  background-color: $hover-color;
+                }
+
+                &:active {
+                  background-color: $active-color;
+                }
+              }
+
+              .error-message {
+                color: red;
+                margin: 0.5rem 0 0;
+                font-size: 0.7rem;
+              }
+            }
+          }
+
+          .badge-name {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            overflow-x: auto;
+            white-space: nowrap;
+
+            scrollbar-width: thin;
+            scrollbar-color: gray transparent;
+          }
+
+          .badge-update,
+          .badge-copy-url,
+          .badge-delete {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+          }
+
+          .badge-update,
+          .badge-copy-url,
+          .badge-delete {
+            .button {
+              width: 40px;
+              height: 40px;
+              padding: 0.3rem;
+
               border-radius: 0.5rem;
+              box-sizing: border-box;
+
               cursor: pointer;
-              font-size: 0.8rem;
-              font-weight: bold;
-              margin-right: 0.5rem;
 
               &:hover {
                 background-color: $hover-color;
@@ -543,129 +599,80 @@ body {
               &:active {
                 background-color: $active-color;
               }
-            }
-
-            .error-message {
-              color: red;
-              margin: 0.5rem 0 0;
-              font-size: 0.7rem;
-            }
-          }
-        }
-
-        .badge-name {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          overflow-x: auto;
-          white-space: nowrap;
-
-          scrollbar-width: thin;
-          scrollbar-color: gray transparent;
-        }
-
-        .badge-update,
-        .badge-copy-url,
-        .badge-delete {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-        }
-
-        .badge-update,
-        .badge-copy-url,
-        .badge-delete {
-          .button {
-            width: 40px;
-            height: 40px;
-            padding: 0.3rem;
-
-            border-radius: 0.5rem;
-            box-sizing: border-box;
-
-            cursor: pointer;
-
-            &:hover {
-              background-color: $hover-color;
-            }
-
-            &:active {
-              background-color: $active-color;
-            }
-
-            img {
-              width: 100%;
-              height: 100%;
-            }
-          }
-        }
-
-        .badge-preview {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          height: 100%;
-
-          .loading-animation {
-            width: 50px;
-            height: 50px;
-            animation: rotate 1s linear infinite;
-
-            @keyframes rotate {
-              from {
-                transform: rotate(0deg);
-              }
-              to {
-                transform: rotate(360deg);
-              }
-            }
-          }
-
-          .image-container {
-            position: relative;
-            width: 100%;
-            height: 30px;
-
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-
-            overflow: hidden;
-            overflow-x: auto;
-            white-space: nowrap;
-            scrollbar-width: thin;
-            scrollbar-color: gray transparent;
-
-            // border: 1px red solid;
-
-            .loading-animation {
-              width: 30px;
-              height: 30px;
-            }
-
-            .image-inner-container {
-              position: relative;
-              display: inline-block;
-              height: 80%;
 
               img {
-                position: relative;
-                height: 100%;
-                z-index: 2;
-              }
-
-              .background-panel {
-                position: absolute;
-                top: 0;
-                left: 0;
                 width: 100%;
                 height: 100%;
-                z-index: 1;
-                background-image: url("./img/vector_background_img.jpg");
-                background-repeat: repeat;
-                background-size: auto 100%;
+              }
+            }
+          }
+
+          .badge-preview {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+
+            .loading-animation {
+              width: 50px;
+              height: 50px;
+              animation: rotate 1s linear infinite;
+
+              @keyframes rotate {
+                from {
+                  transform: rotate(0deg);
+                }
+                to {
+                  transform: rotate(360deg);
+                }
+              }
+            }
+
+            .image-container {
+              position: relative;
+              width: 100%;
+              height: 30px;
+
+              display: flex;
+              flex-direction: column;
+              align-items: start;
+
+              overflow: hidden;
+              overflow-x: auto;
+              white-space: nowrap;
+              scrollbar-width: thin;
+              scrollbar-color: gray transparent;
+
+              // border: 1px red solid;
+
+              .loading-animation {
+                width: 30px;
+                height: 30px;
+              }
+
+              .image-inner-container {
+                position: relative;
+                display: inline-block;
+                height: 80%;
+
+                img {
+                  position: relative;
+                  height: 100%;
+                  z-index: 2;
+                }
+
+                .background-panel {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  z-index: 1;
+                  background-image: url("./img/vector_background_img.jpg");
+                  background-repeat: repeat;
+                  background-size: auto 100%;
+                }
               }
             }
           }
