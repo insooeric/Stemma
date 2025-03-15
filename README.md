@@ -5,7 +5,7 @@
   </div>
 </div>
 
-This is home to [Stemma](https://stemma.vercel.app/), a webservice for displaying badges and other images in SVG, built for GitHub readmes and other web page. The application involves loging in with GitHub account using OAuth2, managing customized badges, and others.
+This is home to [Stemma](https://stemma.vercel.app/), a webservice for displaying badges and other images in SVG, built for GitHub readmes and other web page. The application involves logging in with GitHub account using OAuth2, managing customized badges, and others.
 
 # Contents
 
