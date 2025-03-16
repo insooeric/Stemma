@@ -1,7 +1,9 @@
 import home_banner from "@/img/home_banner.jpeg";
 import logo_full_sd_icon from "@/img/logo_full_sd_icon.svg";
+import { useNavigate } from "react-router-dom";
 
 const HomePage: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className="home-page">
       <div className="banner">
@@ -33,6 +35,18 @@ const HomePage: React.FC = () => {
       <br />
       <div className="img-container">
         <img src="https://stemma.onrender.com/api/badge?user=insooeric&badge=welcome,to,s,temma" />
+      </div>
+
+      <div className="get-started-btn">
+        <button
+          className="btn"
+          onClick={() => {
+            navigate("/document");
+          }}
+        >
+          <span></span>
+          <p data-text="Click Me!" data-title="Get Started"></p>
+        </button>
       </div>
     </div>
   );

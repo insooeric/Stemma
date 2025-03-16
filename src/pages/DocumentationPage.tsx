@@ -40,6 +40,7 @@ const DocumentationPage: React.FC = () => {
   return (
     <div className="documentation-page">
       <h1>Documentation</h1>
+      <br />
       <div className="grid-view">
         <div className="option-list">
           <div className="dropdown">
