@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
+  const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
   return (
     <div className="home-page">
       <div className="banner">
@@ -40,11 +41,15 @@ const HomePage: React.FC = () => {
       <div className="get-started-btn">
         <button
           className="btn"
-          onClick={() => {
-            navigate("/document");
+          onClick={async () => {
+            await delay(500).then(() => {
+              navigate("/document");
+            });
           }}
         >
-          <span></span>
+          <span className="hover-animation" />
+          <span className="default-horizontal" />
+          <span className="default-vertical" />
           <p data-text="Click Me!" data-title="Get Started"></p>
         </button>
       </div>
