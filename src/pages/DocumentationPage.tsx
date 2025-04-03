@@ -8,6 +8,8 @@ import DeleteBadge from "@/components/DocumentComponents/DeleteBadge";
 import GridBadges from "@/components/DocumentComponents/GridBadges";
 import React, { useEffect, useRef, useState } from "react";
 import Widgets from "@/components/DocumentComponents/Widgets";
+import MultipleBadges from "@/components/DocumentComponents/MultipleBadges";
+import SingleBadge from "@/components/DocumentComponents/SingleBadge";
 
 const DocumentationPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Get Started");
@@ -175,11 +177,60 @@ const DocumentationPage: React.FC = () => {
               <li className="listitem" role="listitem">
                 <div
                   className={`sub-option ${
-                    activeTab === "Gridding Badges" ? "active" : ""
+                    activeTab === "Single Badge" ? "active" : ""
                   }`}
-                  onClick={() => setActiveTab("Gridding Badges")}
+                  onClick={() => setActiveTab("Single Badge")}
                 >
-                  Gridding Badges
+                  Single Badge
+                </div>
+              </li>
+
+              <li className="listitem" role="listitem">
+                <div
+                  className={`sub-option ${
+                    activeTab === "Multiple Badges" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("Multiple Badges")}
+                >
+                  Multiple Badges
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div className="dropdown">
+            <input
+              hidden={true}
+              checked={activeDropdown === "Gridding"}
+              onChange={() => {
+                if (activeDropdown === "Gridding") {
+                  setActiveDropdown("");
+                } else {
+                  setActiveDropdown("Gridding");
+                }
+              }}
+              className="sr-only"
+              name="state-dropdown3"
+              id="state-dropdown3"
+              type="checkbox"
+            />
+            <label
+              aria-label="dropdown scrollbar"
+              htmlFor="state-dropdown3"
+              className="trigger"
+            >
+              Gridding
+            </label>
+
+            <ul className="list webkit-scrollbar" role="list" dir="auto">
+              <li className="listitem" role="listitem">
+                <div
+                  className={`sub-option ${
+                    activeTab === "Gridding" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("Basic Gridding")}
+                >
+                  Basic Gridding
                 </div>
               </li>
             </ul>
@@ -197,13 +248,13 @@ const DocumentationPage: React.FC = () => {
                 }
               }}
               className="sr-only"
-              name="state-dropdown3"
-              id="state-dropdown3"
+              name="state-dropdown4"
+              id="state-dropdown4"
               type="checkbox"
             />
             <label
               aria-label="dropdown scrollbar"
-              htmlFor="state-dropdown3"
+              htmlFor="state-dropdown4"
               className="trigger"
             >
               Widgets
@@ -223,6 +274,7 @@ const DocumentationPage: React.FC = () => {
             </ul>
           </div>
         </div>
+
         <div className="description-content" ref={descriptionContentRef}>
           <div
             className={`content ${activeTab === "Get Started" ? "active" : ""}`}
@@ -267,7 +319,21 @@ const DocumentationPage: React.FC = () => {
           </div>
           <div
             className={`content ${
-              activeTab === "Gridding Badges" ? "active" : ""
+              activeTab === "Single Badge" ? "active" : ""
+            }`}
+          >
+            <SingleBadge />
+          </div>
+          <div
+            className={`content ${
+              activeTab === "Multiple Badges" ? "active" : ""
+            }`}
+          >
+            <MultipleBadges />
+          </div>
+          <div
+            className={`content ${
+              activeTab === "Basic Gridding" ? "active" : ""
             }`}
           >
             <GridBadges />

@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
   const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
+
   return (
     <div className="home-page">
       <div className="banner">

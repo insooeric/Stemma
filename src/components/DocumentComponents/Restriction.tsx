@@ -21,6 +21,25 @@ const Restriction: React.FC = () => {
           storage efficiency.
         </li>
       </ol>
+      <br />
+      <h2>Naming custome badges</h2>
+      <p>Followings are rules for naming badges:</p>
+      <ol>
+        <li>
+          The name of custome badges cannot be as same as the name of default
+          badges. <br />
+          For example, name <span className="dark">javascript</span> is
+          prohibited since one of the default badges uses that name.
+        </li>
+        <li>
+          Names are <span className="alert">CASE SENSITIVE</span>. So, make sure
+          you're using the right one.
+        </li>
+        <li>
+          Names cannot have <span className="dark">SPACE</span> or{" "}
+          <span className="dark">DOT</span>
+        </li>
+      </ol>
 
       <div className="end-of-content" />
     </div>

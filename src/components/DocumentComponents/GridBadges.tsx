@@ -17,157 +17,99 @@ const GridBadges: React.FC = () => {
   return (
     <div className="inner-content">
       <h1>Gridding Badges</h1>
-      <p>You can display multiple badges using in-line properties.</p>
-      <p>Followings are properties you can configure</p>
+      <p>
+        <span className="alert">!!IMPORTANT!!</span>
+        <br />
+        If you have multiple properties, make sure to add{" "}
+        <span className="dark">&</span> between each property.
+      </p>
+      <br />
+      <p>
+        You can grid multiple badges using <span className="dark">row=</span>{" "}
+        and <span className="dark">col=</span>
+      </p>
       <ul>
         <li>
-          badge=<span className="dark">Item1, Item2, Item3</span>
+          badge=<span className="dark">Item1, Item2, Item3, ...</span>
         </li>
         <li>
-          row=<span className="dark">Integer number</span>
+          row=
+          <span className="dark">Integer number</span>
         </li>
         <li>
           col=<span className="dark">Integer number</span>
         </li>
-        <li>
-          fit=<span className="dark">True or False</span>
-        </li>
       </ul>
       <p>
-        <span className="alert">IMPORTANT!</span>
+        Note that <span className="dark">row=</span> and{" "}
+        <span className="dark">col=</span> properties are optional.
       </p>
-      <p>
-        In order to use both customized badges and default badges, you must
-        include your GitHub user name in <span className="dark">user=</span>
-      </p>
-      <p>
-        For example, <span className="dark">...user=GitHubUserName...</span>
-      </p>
-      <h2>Multiple badges</h2>
-      <p>
-        You can display both your badges and default badges by adding the name
-        of badge in the <span className="dark">badge=</span> property.
-      </p>
-      <p>By default, it will display badges with a single row.</p>
-      <p>
-        Additionally, if you add <span className="dark">javascript</span> which
-        is one of the default badges, it will automatically look for the default
-        badge and implement it.
-      </p>
-      <p>
-        For example,{" "}
-        <span className="dark">...badge=my_custom_badge, javascript,...</span>
-      </p>
+      <br />
+      <h2>Row</h2>
+      <p>Following is an example of 5 badges with 2 rows:</p>
       <div className="code-block">
         <div className="scroll-container">
-          https://stemma.onrender.com/api/badge?user=insooeric&badge=cat,readme_i,readme_do,readme_full_stack,readme_development,javascript,cs
+          https://stemma.onrender.com/api/badge?user=insooeric&badge=readme_development,react,dotnet,typescript,cs&row=2
         </div>
         <img
           alt="Copy"
           src={copy_icon}
           onClick={() =>
             handleCopyClick(
-              "https://stemma.onrender.com/api/badge?user=insooeric&badge=cat,readme_i,readme_do,readme_full_stack,readme_development,javascript,cs"
+              "https://stemma.onrender.com/api/badge?user=insooeric&badge=readme_development,react,dotnet,typescript,cs&row=2"
             )
           }
         />
       </div>
       <img
         className="image"
-        alt="Badge Gridding Example"
-        src="https://stemma.onrender.com/api/badge?user=insooeric&badge=cat,readme_i,readme_do,readme_full_stack,readme_development,javascript,cs"
+        alt="Grid Example"
+        src="https://stemma.onrender.com/api/badge?user=insooeric&badge=readme_development,react,dotnet,typescript,cs&row=2"
       />
       <br />
-      <h2>Rows</h2>
-      <p>
-        You can use <span className="dark">row=</span> property to display
-        badges in multiple rows.
-      </p>
-      <p>The column will be adjusted automatically by default.</p>
-      <p>The value of row should be a valid integer number.</p>
-      <p>
-        For example, <span className="dark">...row=2...</span>
-      </p>
+
+      <h2>Column</h2>
+      <p>Following is an example of 5 badges with 2 columns:</p>
       <div className="code-block">
         <div className="scroll-container">
-          https://stemma.onrender.com/api/badge?user=insooeric&badge=cat,readme_i,readme_do,readme_full_stack,readme_development,javascript,cs&row=2
+          https://stemma.onrender.com/api/badge?user=insooeric&badge=readme_development,react,dotnet,typescript,cs&col=2
         </div>
         <img
           alt="Copy"
           src={copy_icon}
           onClick={() =>
             handleCopyClick(
-              "https://stemma.onrender.com/api/badge?user=insooeric&badge=cat,readme_i,readme_do,readme_full_stack,readme_development,javascript,cs&row=2"
+              "https://stemma.onrender.com/api/badge?user=insooeric&badge=readme_development,react,dotnet,typescript,cs&col=2"
             )
           }
         />
       </div>
       <img
         className="image"
-        alt="Badge Gridding Example"
-        src="https://stemma.onrender.com/api/badge?user=insooeric&badge=cat,readme_i,readme_do,readme_full_stack,readme_development,javascript,cs&row=2"
+        alt="Grid Example"
+        src="https://stemma.onrender.com/api/badge?user=insooeric&badge=readme_development,react,dotnet,typescript,cs&col=2"
       />
-      <br />
-      <h2>Columns</h2>
-      <p>
-        You can use <span className="dark">col=</span> property to display
-        badges in multiple columns.
-      </p>
-      <p>The row will be adjusted automatically by default.</p>
-      <p>The value of column should be a valid integer number.</p>
-      <p>
-        For example, <span className="dark">...col=2...</span>
-      </p>
+
+      <h2>Rows and Columns</h2>
+      <p>Following is an example of 5 badges with 2 rows and 3 columns</p>
       <div className="code-block">
         <div className="scroll-container">
-          https://stemma.onrender.com/api/badge?user=insooeric&badge=cat,readme_i,readme_do,readme_full_stack,readme_development,javascript,cs&col=2
+          https://stemma.onrender.com/api/badge?user=insooeric&badge=readme_development,react,dotnet,typescript,cs&row=2&col=3
         </div>
         <img
           alt="Copy"
           src={copy_icon}
           onClick={() =>
             handleCopyClick(
-              "https://stemma.onrender.com/api/badge?user=insooeric&badge=cat,readme_i,readme_do,readme_full_stack,readme_development,javascript,cs&col=2"
+              "https://stemma.onrender.com/api/badge?user=insooeric&badge=readme_development,react,dotnet,typescript,cs&row=2&col=3"
             )
           }
         />
       </div>
       <img
         className="image"
-        alt="Badge Gridding Example"
-        src="https://stemma.onrender.com/api/badge?user=insooeric&badge=cat,readme_i,readme_do,readme_full_stack,readme_development,javascript,cs&col=2"
-      />
-      <br />
-      <h2>Fit content</h2>
-      <p>
-        Optionally, if you want to fit badges in grid, you can use{" "}
-        <span className="dark">fit=</span> property.
-      </p>
-      <p>
-        The value of fit should be either <span className="dark">true</span> or{" "}
-        <span className="dark">false</span>
-      </p>
-      <p>
-        For example, <span className="dark">...fit=true...</span>
-      </p>
-      <div className="code-block">
-        <div className="scroll-container">
-          https://stemma.onrender.com/api/badge?user=insooeric&badge=cat,readme_i,readme_do,readme_full_stack,readme_development,javascript,cs&row=2&fit=true
-        </div>
-        <img
-          alt="Copy"
-          src={copy_icon}
-          onClick={() =>
-            handleCopyClick(
-              "https://stemma.onrender.com/api/badge?user=insooeric&badge=cat,readme_i,readme_do,readme_full_stack,readme_development,javascript,cs&row=2&fit=true"
-            )
-          }
-        />
-      </div>
-      <img
-        className="image"
-        alt="Badge Gridding Example"
-        src="https://stemma.onrender.com/api/badge?user=insooeric&badge=cat,readme_i,readme_do,readme_full_stack,readme_development,javascript,cs&row=2&fit=true"
+        alt="Grid Example"
+        src="https://stemma.onrender.com/api/badge?user=insooeric&badge=readme_development,react,dotnet,typescript,cs&row=2&col=3"
       />
       <br />
       <p>
