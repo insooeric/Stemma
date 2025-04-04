@@ -25,8 +25,9 @@ const GridBadges: React.FC = () => {
       </p>
       <br />
       <p>
-        You can grid multiple badges using <span className="dark">row=</span>{" "}
-        and <span className="dark">col=</span>
+        You can place multiple badges in grid. Grid id defined by either
+        specifying <span className="dark">row=</span> or{" "}
+        <span className="dark">col=</span>, or both properties.
       </p>
       <ul>
         <li>
@@ -43,6 +44,7 @@ const GridBadges: React.FC = () => {
       <p>
         Note that <span className="dark">row=</span> and{" "}
         <span className="dark">col=</span> properties are optional.
+        <br />
       </p>
       <br />
       <h2>Row</h2>
@@ -117,6 +119,7 @@ const GridBadges: React.FC = () => {
           NOTE that the size doesn't look exactly the same as in the examples.
         </span>
       </p>
+
       <div className="end-of-content" />
     </div>
   );

@@ -10,6 +10,9 @@ import React, { useEffect, useRef, useState } from "react";
 import Widgets from "@/components/DocumentComponents/Widgets";
 import MultipleBadges from "@/components/DocumentComponents/MultipleBadges";
 import SingleBadge from "@/components/DocumentComponents/SingleBadge";
+import TemplateRowCol from "@/components/DocumentComponents/TemplateRowCol";
+import GridGap from "@/components/DocumentComponents/GridGap";
+import AdvancedTemplate from "@/components/DocumentComponents/AdvancedTemplate";
 
 const DocumentationPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Get Started");
@@ -233,6 +236,37 @@ const DocumentationPage: React.FC = () => {
                   Basic Gridding
                 </div>
               </li>
+              <li className="listitem" role="listitem">
+                <div
+                  className={`sub-option ${
+                    activeTab === "GridGap" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("GridGap")}
+                >
+                  Gap
+                </div>
+              </li>
+              <li className="listitem" role="listitem">
+                <div
+                  className={`sub-option ${
+                    activeTab === "TemplateRowCol" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("TemplateRowCol")}
+                >
+                  Template Grid
+                </div>
+              </li>
+
+              <li className="listitem" role="listitem">
+                <div
+                  className={`sub-option ${
+                    activeTab === "AdvancedTemplate" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("AdvancedTemplate")}
+                >
+                  Advanced Template
+                </div>
+              </li>
             </ul>
           </div>
 
@@ -337,6 +371,24 @@ const DocumentationPage: React.FC = () => {
             }`}
           >
             <GridBadges />
+          </div>
+
+          <div className={`content ${activeTab === "GridGap" ? "active" : ""}`}>
+            <GridGap />
+          </div>
+          <div
+            className={`content ${
+              activeTab === "TemplateRowCol" ? "active" : ""
+            }`}
+          >
+            <TemplateRowCol />
+          </div>
+          <div
+            className={`content ${
+              activeTab === "AdvancedTemplate" ? "active" : ""
+            }`}
+          >
+            <AdvancedTemplate />
           </div>
           <div
             className={`content ${

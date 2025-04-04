@@ -54,7 +54,7 @@ const MultipleBadges: React.FC = () => {
       <h2>Custome badges</h2>
       <p>
         By adding <span className="dark">user=[YourGitHubUserName]</span>{" "}
-        property, you can display multiple badges.
+        property with same rule, you can display multiple badges.
       </p>
       <div className="code-block">
         <div className="scroll-container">
@@ -78,11 +78,14 @@ const MultipleBadges: React.FC = () => {
       <br />
       <h2>Custome and Default badges</h2>
       <p>
-        You can display both your badges and default badges in the same time.
+        You can display both your badges and default badges in the same time
+        just like you print multiple custome badges.
       </p>
       <p>
         However, make sure to add{" "}
-        <span className="dark">user=[YourGitHubUserName]</span> property.
+        <span className="dark">user=[YourGitHubUserName]</span> property since
+        for custome badges, it will look for the image that's associated with
+        your username.
       </p>
       <div className="code-block">
         <div className="scroll-container">
