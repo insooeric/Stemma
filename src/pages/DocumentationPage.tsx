@@ -12,7 +12,9 @@ import MultipleBadges from "@/components/DocumentComponents/MultipleBadges";
 import SingleBadge from "@/components/DocumentComponents/SingleBadge";
 import TemplateRowCol from "@/components/DocumentComponents/TemplateRowCol";
 import GridGap from "@/components/DocumentComponents/GridGap";
-import AdvancedTemplate from "@/components/DocumentComponents/AdvancedTemplate";
+import Indentations from "@/components/DocumentComponents/Indentations";
+import IndentSize from "@/components/DocumentComponents/IndentSize";
+import FitGrid from "@/components/DocumentComponents/FitGrid";
 
 const DocumentationPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Get Started");
@@ -260,11 +262,33 @@ const DocumentationPage: React.FC = () => {
               <li className="listitem" role="listitem">
                 <div
                   className={`sub-option ${
-                    activeTab === "AdvancedTemplate" ? "active" : ""
+                    activeTab === "Indentations" ? "active" : ""
                   }`}
-                  onClick={() => setActiveTab("AdvancedTemplate")}
+                  onClick={() => setActiveTab("Indentations")}
                 >
-                  Advanced Template
+                  Indentations
+                </div>
+              </li>
+
+              <li className="listitem" role="listitem">
+                <div
+                  className={`sub-option ${
+                    activeTab === "IndentationSize" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("IndentationSize")}
+                >
+                  Indent Size
+                </div>
+              </li>
+
+              <li className="listitem" role="listitem">
+                <div
+                  className={`sub-option ${
+                    activeTab === "FitGrid" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("FitGrid")}
+                >
+                  Fit
                 </div>
               </li>
             </ul>
@@ -385,10 +409,20 @@ const DocumentationPage: React.FC = () => {
           </div>
           <div
             className={`content ${
-              activeTab === "AdvancedTemplate" ? "active" : ""
+              activeTab === "Indentations" ? "active" : ""
             }`}
           >
-            <AdvancedTemplate />
+            <Indentations />
+          </div>
+          <div
+            className={`content ${
+              activeTab === "IndentationSize" ? "active" : ""
+            }`}
+          >
+            <IndentSize />
+          </div>
+          <div className={`content ${activeTab === "FitGrid" ? "active" : ""}`}>
+            <FitGrid />
           </div>
           <div
             className={`content ${

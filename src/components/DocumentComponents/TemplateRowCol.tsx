@@ -92,7 +92,7 @@ const TemplateRowCol: React.FC = () => {
         <br />
         Unspecified (or 3, <span className="dark">row=3</span>) rows
         <br />
-        Template column of 3,2,3 <span className="dark">row=3,2,3</span>
+        Template column of 3,2,3 <span className="dark">col=3,2,3</span>
       </p>
       <div className="code-block">
         <div className="scroll-container">
@@ -122,8 +122,22 @@ const TemplateRowCol: React.FC = () => {
         <span className="dark">row=5,5,6,3,4,1</span>
         <br />
         Template column of 3,1,6,5,5,4{" "}
-        <span className="dark">row=3,1,6,5,5,4</span>
+        <span className="dark">col=3,1,6,5,5,4</span>
       </p>
+      <div className="code-block">
+        <div className="scroll-container">
+          https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,react,typescript,dotnet,redis,to,vite,javascript,cs,github,s,temma,vercel,html,oauth0,api,redux,sass,gcp,render,docker,visualstudio,vscode,vercel&row=5,5,6,3,4,1&col=3,1,6,5,5,4
+        </div>
+        <img
+          alt="Copy"
+          src={copy_icon}
+          onClick={() =>
+            handleCopyClick(
+              "https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,react,typescript,dotnet,redis,to,vite,javascript,cs,github,s,temma,vercel,html,oauth0,api,redux,sass,gcp,render,docker,visualstudio,vscode,vercel&row=5,5,6,3,4,1&col=3,1,6,5,5,4"
+            )
+          }
+        />
+      </div>
       <img
         className="image"
         alt="Grid Example"
