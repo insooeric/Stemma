@@ -50,24 +50,24 @@ const Indentations: React.FC = () => {
 
       <h2>Indentations in Rows</h2>
       <p>
-        Following is an example of 24 badges with
+        Following is an example of 16 badges with
         <br />
-        Template row (including indentation) of 5,5,6,0,3,4,1 <br />
-        <span className="dark">row=5,5,6,0,3,4,1</span>
+        Template row (with indentation) of 2,0,8,6 <br />
+        <span className="dark">row=2,0,8,6</span>
         <br />
-        Template column of 3,1,6,5,5,4 <br />
-        <span className="dark">col=3,1,6,5,5,4</span>
+        Template column of 3,2,2,1,3,2,2,1 <br />
+        <span className="dark">col=3,2,2,1,3,2,2,1</span>
       </p>
       <div className="code-block">
         <div className="scroll-container">
-          https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,react,typescript,dotnet,redis,to,vite,javascript,cs,github,s,temma,vercel,html,oauth0,api,redux,sass,gcp,render,docker,visualstudio,vscode,vercel&row=5,5,6,0,3,4,1&col=3,1,6,5,5,4
+          https://stemma.onrender.com/api/Badge?user=insooeric&badge=front_end,back_end,react,typescript,javascript,html,dotnet,cs,redis,gcp,sass,vite,redux,github,api,oauth0&row=2,0,8,6&col=3,2,2,1,3,2,2,1
         </div>
         <img
           alt="Copy"
           src={copy_icon}
           onClick={() =>
             handleCopyClick(
-              "https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,react,typescript,dotnet,redis,to,vite,javascript,cs,github,s,temma,vercel,html,oauth0,api,redux,sass,gcp,render,docker,visualstudio,vscode,vercel&row=5,5,6,0,3,4,1&col=3,1,6,5,5,4"
+              "https://stemma.onrender.com/api/Badge?user=insooeric&badge=front_end,back_end,react,typescript,javascript,html,dotnet,cs,redis,gcp,sass,vite,redux,github,api,oauth0&row=2,0,8,6&col=3,2,2,1,3,2,2,1"
             )
           }
         />
@@ -75,29 +75,29 @@ const Indentations: React.FC = () => {
       <img
         className="image"
         alt="Grid Example"
-        src="https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,react,typescript,dotnet,redis,to,vite,javascript,cs,github,s,temma,vercel,html,oauth0,api,redux,sass,gcp,render,docker,visualstudio,vscode,vercel&row=5,5,6,0,3,4,1&col=3,1,6,5,5,4"
+        src="https://stemma.onrender.com/api/Badge?user=insooeric&badge=front_end,back_end,react,typescript,javascript,html,dotnet,cs,redis,gcp,sass,vite,redux,github,api,oauth0&row=2,0,8,6&col=3,2,2,1,3,2,2,1"
       />
       <br />
       <h2>Indentations in Columns</h2>
       <p>
-        Following is an example of 24 badges with
+        Following is an example of 16 badges with
         <br />
-        Template row of 5,5,6,3,4,1 <br />
-        <span className="dark">row=5,5,6,3,4,1</span>
+        Template row of 2,8,6 <br />
+        <span className="dark">row=2,8,6</span>
         <br />
-        Template column (including indentations) of 3,1,0,0,6,5,0,5,4 <br />
-        <span className="dark">col=3,1,0,0,6,5,0,5,4</span>
+        Template column (with two indentations) of 3,2,2,1,0,0,3,2,2,1 <br />
+        <span className="dark">col=3,2,2,1,0,3,2,2,1</span>
       </p>
       <div className="code-block">
         <div className="scroll-container">
-          https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,react,typescript,dotnet,redis,to,vite,javascript,cs,github,s,temma,vercel,html,oauth0,api,redux,sass,gcp,render,docker,visualstudio,vscode,vercel&row=5,5,6,3,4,1&col=3,1,0,0,6,5,0,5,4
+          https://stemma.onrender.com/api/Badge?user=insooeric&badge=front_end,back_end,react,typescript,javascript,html,dotnet,cs,redis,gcp,sass,vite,redux,github,api,oauth0&row=2,8,6&col=3,2,2,1,0,0,3,2,2,1
         </div>
         <img
           alt="Copy"
           src={copy_icon}
           onClick={() =>
             handleCopyClick(
-              "https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,react,typescript,dotnet,redis,to,vite,javascript,cs,github,s,temma,vercel,html,oauth0,api,redux,sass,gcp,render,docker,visualstudio,vscode,vercel&row=5,5,6,3,4,1&col=3,1,0,0,6,5,0,5,4"
+              "https://stemma.onrender.com/api/Badge?user=insooeric&badge=front_end,back_end,react,typescript,javascript,html,dotnet,cs,redis,gcp,sass,vite,redux,github,api,oauth0&row=2,8,6&col=3,2,2,1,0,0,3,2,2,1"
             )
           }
         />
@@ -105,29 +105,29 @@ const Indentations: React.FC = () => {
       <img
         className="image"
         alt="Grid Example"
-        src="https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,react,typescript,dotnet,redis,to,vite,javascript,cs,github,s,temma,vercel,html,oauth0,api,redux,sass,gcp,render,docker,visualstudio,vscode,vercel&row=5,5,6,3,4,1&col=3,1,0,0,6,5,0,5,4"
+        src="https://stemma.onrender.com/api/Badge?user=insooeric&badge=front_end,back_end,react,typescript,javascript,html,dotnet,cs,redis,gcp,sass,vite,redux,github,api,oauth0&row=2,8,6&col=3,2,2,1,0,0,3,2,2,1"
       />
       <br />
       <h2>Indentations In Both Rows And Columns</h2>
       <p>
-        Following is an example of 24 badges with
+        Following is an example of 16 badges with
         <br />
-        Template row (including indentation) of 5,5,6,0,3,4,1 <br />
-        <span className="dark">row=5,5,6,0,3,4,1</span>
+        Template row (with indentation) of 2,0,8,6 <br />
+        <span className="dark">row=2,0,8,6</span>
         <br />
-        Template column (including indentations) of 3,1,0,0,6,5,0,5,4 <br />
-        <span className="dark">col=3,1,0,0,6,5,0,5,4</span>
+        Template column (with two indentations) of 3,2,2,1,0,0,3,2,2,1 <br />
+        <span className="dark">col=3,2,2,1,0,0,3,2,2,1</span>
       </p>
       <div className="code-block">
         <div className="scroll-container">
-          https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,react,typescript,dotnet,redis,to,vite,javascript,cs,github,s,temma,vercel,html,oauth0,api,redux,sass,gcp,render,docker,visualstudio,vscode,vercel&row=5,5,6,0,3,4,1&col=3,1,0,0,6,5,0,5,4
+          https://stemma.onrender.com/api/Badge?user=insooeric&badge=front_end,back_end,react,typescript,javascript,html,dotnet,cs,redis,gcp,sass,vite,redux,github,api,oauth0&row=2,0,8,6&col=3,2,2,1,0,0,3,2,2,1
         </div>
         <img
           alt="Copy"
           src={copy_icon}
           onClick={() =>
             handleCopyClick(
-              "https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,react,typescript,dotnet,redis,to,vite,javascript,cs,github,s,temma,vercel,html,oauth0,api,redux,sass,gcp,render,docker,visualstudio,vscode,vercel&row=5,5,6,0,3,4,1&col=3,1,0,0,6,5,0,5,4"
+              "https://stemma.onrender.com/api/Badge?user=insooeric&badge=front_end,back_end,react,typescript,javascript,html,dotnet,cs,redis,gcp,sass,vite,redux,github,api,oauth0&row=2,0,8,6&col=3,2,2,1,0,0,3,2,2,1"
             )
           }
         />
@@ -135,7 +135,7 @@ const Indentations: React.FC = () => {
       <img
         className="image"
         alt="Grid Example"
-        src="https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,react,typescript,dotnet,redis,to,vite,javascript,cs,github,s,temma,vercel,html,oauth0,api,redux,sass,gcp,render,docker,visualstudio,vscode,vercel&row=5,5,6,0,3,4,1&col=3,1,0,0,6,5,0,5,4"
+        src="https://stemma.onrender.com/api/Badge?user=insooeric&badge=front_end,back_end,react,typescript,javascript,html,dotnet,cs,redis,gcp,sass,vite,redux,github,api,oauth0&row=2,0,8,6&col=3,2,2,1,0,0,3,2,2,1"
       />
       <div className="end-of-content" />
     </div>

@@ -59,22 +59,22 @@ const TemplateRowCol: React.FC = () => {
       <br />
       <h2>Template Row</h2>
       <p>
-        Following is an example of 15 badges with
+        Following is an example of 8 badges with
         <br />
-        Template row of 5,4,6 <span className="dark">row=5,4,6</span>
+        Template row of 2,2,4 <span className="dark">row=2,2,4</span>
         <br />
-        Unspecified (or <span className="dark">col=6</span>) columns
+        Unspecified (or <span className="dark">col=3</span>) columns
       </p>
       <div className="code-block">
         <div className="scroll-container">
-          https://stemma.onrender.com/api/Badge?user=insooeric&badge=cat,welcome,to,s,temma,react,typescript,html,sass,dotnet,cs,redis,oauth0,gcp,vercel_long&row=5,4,6
+          https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,cat,to,cs,s,temma,react,typescript&row=2,2,4
         </div>
         <img
           alt="Copy"
           src={copy_icon}
           onClick={() =>
             handleCopyClick(
-              "https://stemma.onrender.com/api/Badge?user=insooeric&badge=cat,welcome,to,s,temma,react,typescript,html,sass,dotnet,cs,redis,oauth0,gcp,vercel_long&row=5,4,6"
+              "https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,cat,to,cs,s,temma,react,typescript&row=2,2,4"
             )
           }
         />
@@ -82,7 +82,7 @@ const TemplateRowCol: React.FC = () => {
       <img
         className="image"
         alt="Grid Example"
-        src="https://stemma.onrender.com/api/Badge?user=insooeric&badge=cat,welcome,to,s,temma,react,typescript,html,sass,dotnet,cs,redis,oauth0,gcp,vercel_long&row=5,4,6"
+        src="https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,cat,to,cs,s,temma,react,typescript&row=2,2,4"
       />
       <br />
 
@@ -141,7 +141,7 @@ const TemplateRowCol: React.FC = () => {
       <img
         className="image"
         alt="Grid Example"
-        src="https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,react,typescript,dotnet,redis,to,vite,javascript,cs,github,s,temma,vercel,html,oauth0,api,redux,sass,gcp,render,docker,visualstudio,vscode,vercel&row=5,5,6,3,4,1&col=3,1,6,5,5,4"
+        src="https://stemma.onrender.com/api/Badge?user=insooeric&badge=front_end,back_end,react,typescript,javascript,html,dotnet,cs,redis,gcp,sass,vite,redux,github,api,oauth0&row=2,8,6&col=3,2,2,1,3,2,2,1"
       />
       <br />
       <p>
