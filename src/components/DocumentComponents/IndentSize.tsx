@@ -46,29 +46,29 @@ const IndentSize: React.FC = () => {
       <br />
       <h2>Example</h2>
       <p>
-        Following is an example of 24 badges with
+        Following is an example of 16 badges with
         <br />
-        Template row (including indentation) of 5,5,6,0,3,4,1 <br />
-        <span className="dark">row=5,5,6,0,3,4,1</span>
+        Template row (with indentation) of 2,0,8,6 <br />
+        <span className="dark">row=2,0,8,6</span>
         <br />
-        Template column (including indentations) of 3,1,0,0,6,5,0,5,4 <br />
-        <span className="dark">col=3,1,0,0,6,5,0,5,4</span>
+        Template column (with two indentations) of 3,2,2,1,0,0,3,2,2,1 <br />
+        <span className="dark">col=3,2,2,1,0,0,3,2,2,1</span>
         <br />
-        Size of indentation cell: 20 x 10 pixels <br />
-        <span className="dark">emptyWidth=20</span>
+        Size of indentation cell: 10 x 5 pixels <br />
+        <span className="dark">emptyWidth=10</span>
         <br />
-        <span className="dark">emptyHeight=10</span>
+        <span className="dark">emptyHeight=5</span>
       </p>
       <div className="code-block">
         <div className="scroll-container">
-          https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,react,typescript,dotnet,redis,to,vite,javascript,cs,github,s,temma,vercel,html,oauth0,api,redux,sass,gcp,render,docker,visualstudio,vscode,vercel&row=5,5,6,0,3,4,1&col=3,1,0,0,6,5,0,5,4&emptyWidth=20&emptyHeight=10
+          https://stemma.onrender.com/api/Badge?user=insooeric&badge=front_end,back_end,react,typescript,javascript,html,dotnet,cs,redis,gcp,sass,vite,redux,github,api,oauth0&row=2,0,8,6&col=3,2,2,1,0,0,3,2,2,1&emptyWidth=10&emptyHeight=5
         </div>
         <img
           alt="Copy"
           src={copy_icon}
           onClick={() =>
             handleCopyClick(
-              "https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,react,typescript,dotnet,redis,to,vite,javascript,cs,github,s,temma,vercel,html,oauth0,api,redux,sass,gcp,render,docker,visualstudio,vscode,vercel&row=5,5,6,0,3,4,1&col=3,1,0,0,6,5,0,5,4&emptyWidth=20&emptyHeight=10"
+              "https://stemma.onrender.com/api/Badge?user=insooeric&badge=front_end,back_end,react,typescript,javascript,html,dotnet,cs,redis,gcp,sass,vite,redux,github,api,oauth0&row=2,0,8,6&col=3,2,2,1,0,0,3,2,2,1&emptyWidth=10&emptyHeight=5"
             )
           }
         />
@@ -76,7 +76,7 @@ const IndentSize: React.FC = () => {
       <img
         className="image"
         alt="Grid Example"
-        src="https://stemma.onrender.com/api/Badge?user=insooeric&badge=welcome,react,typescript,dotnet,redis,to,vite,javascript,cs,github,s,temma,vercel,html,oauth0,api,redux,sass,gcp,render,docker,visualstudio,vscode,vercel&row=5,5,6,0,3,4,1&col=3,1,0,0,6,5,0,5,4&emptyWidth=20&emptyHeight=10"
+        src="https://stemma.onrender.com/api/Badge?user=insooeric&badge=front_end,back_end,react,typescript,javascript,html,dotnet,cs,redis,gcp,sass,vite,redux,github,api,oauth0&row=2,0,8,6&col=3,2,2,1,0,0,3,2,2,1&emptyWidth=10&emptyHeight=5"
       />
       <div className="end-of-content" />
     </div>

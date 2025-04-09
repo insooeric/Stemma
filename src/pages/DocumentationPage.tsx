@@ -15,6 +15,7 @@ import GridGap from "@/components/DocumentComponents/GridGap";
 import Indentations from "@/components/DocumentComponents/Indentations";
 import IndentSize from "@/components/DocumentComponents/IndentSize";
 import FitGrid from "@/components/DocumentComponents/FitGrid";
+import GridAlign from "@/components/DocumentComponents/GridAlign";
 
 const DocumentationPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Get Started");
@@ -291,6 +292,17 @@ const DocumentationPage: React.FC = () => {
                   Fit
                 </div>
               </li>
+
+              <li className="listitem" role="listitem">
+                <div
+                  className={`sub-option ${
+                    activeTab === "GridAlign" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("GridAlign")}
+                >
+                  Align
+                </div>
+              </li>
             </ul>
           </div>
 
@@ -423,6 +435,11 @@ const DocumentationPage: React.FC = () => {
           </div>
           <div className={`content ${activeTab === "FitGrid" ? "active" : ""}`}>
             <FitGrid />
+          </div>
+          <div
+            className={`content ${activeTab === "GridAlign" ? "active" : ""}`}
+          >
+            <GridAlign />
           </div>
           <div
             className={`content ${
